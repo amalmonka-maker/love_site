@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Be My Valentine 💖</title>
+<style>
+body{
+ margin:0;
+ height:100vh;
+ background:linear-gradient(120deg,#ff416c,#ff4b2b);
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-family:Arial;
+}
+.card{
+ background:white;
+ padding:40px;
+ border-radius:25px;
+ text-align:center;
+ width:330px;
+ box-shadow:0 0 40px rgba(0,0,0,0.3);
+ animation:pop 1s;
+}
+@keyframes pop{from{transform:scale(0);}to{transform:scale(1);}}
+h1{color:#ff416c;}
+.buttons{margin-top:30px;position:relative;height:90px;}
+button{
+ padding:12px 30px;
+ border:none;
+ border-radius:25px;
+ font-size:16px;
+ cursor:pointer;
+ position:absolute;
+}
+#yes{background:#ff416c;color:white;left:40px;}
+#no{background:#333;color:white;right:40px;}
+#msg{margin-top:20px;color:#ff416c;}
+</style>
+</head>
+<body>
+
+<div class="card">
+<h1>Will you be my Valentine? 💖</h1>
+<p>Annammo 🤍💎</p>
+
+<div class="buttons">
+<button id="yes">Yes 💘</button>
+<button id="no">No 🙈</button>
+</div>
+
+<p id="msg"></p>
+</div>
+
+<script>
+let yes=document.getElementById("yes");
+let no=document.getElementById("no");
+let msg=document.getElementById("msg");
+let move=0;
+
+yes.onclick=()=>{
+ move++;
+ if(move<4){
+  yes.style.left=Math.random()*180+"px";
+  yes.style.top=Math.random()*40+"px";
+  msg.innerText="😏 Think again!";
+ }else{
+  msg.innerText="Yesss!!! 😍💍💖";
+  setTimeout(()=>{window.location.href="lock.html";},1200);
+ }
+};
+
+no.onclick=()=>{
+ msg.innerText="Wrong answer 😈 Try again 😏❤️";
+};
+</script>
+
+</body>
+</html>

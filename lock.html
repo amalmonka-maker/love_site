@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Love Gate</title>
+<style>
+body{
+ margin:0;height:100vh;background:black;
+ display:flex;align-items:center;justify-content:center;
+ font-family:Arial;color:white;
+}
+.gate{
+ background:rgba(255,255,255,0.08);
+ padding:40px;border-radius:25px;
+ text-align:center;
+ box-shadow:0 0 40px #ff416c;
+ animation:zoom 1s;
+}
+@keyframes zoom{from{transform:scale(0);}to{transform:scale(1);}}
+input{
+ padding:12px;width:220px;border-radius:20px;border:none;text-align:center;
+}
+button{
+ margin-top:15px;padding:12px 40px;border:none;border-radius:25px;
+ background:#ff416c;color:white;font-size:16px;cursor:pointer;
+ box-shadow:0 0 20px #ff416c;
+}
+</style>
+</head>
+<body>
+
+<div class="gate">
+<h2>🔐 Love Gate</h2>
+<p>Only love can unlock 💖</p>
+<input type="password" id="pass" placeholder="Secret code">
+<br>
+<button onclick="openGate()">Enter 💎</button>
+<p id="msg"></p>
+</div>
+
+<script>
+function openGate(){
+ if(pass.value==="annammo"){
+  window.location.href="intro.html";
+ }else{
+  msg.innerText="Wrong code 💔";
+ }
+}
+</script>
+
+</body>
+</html>
