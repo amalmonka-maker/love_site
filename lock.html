@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>DEAR VALENTINE</title>
+<title>Love Gate</title>
 <style>
 body{
  margin:0;height:100vh;background:black;
@@ -29,7 +29,7 @@ button{
 <body>
 
 <div class="gate">
-<h2>🔐 our date</h2>
+<h2>🔐 Enter our date to open</h2>
 <p>Only we can unlock 💖</p>
 <input type="password" id="pass" placeholder="Secret code">
 <br>
@@ -37,16 +37,15 @@ button{
 <p id="msg"></p>
 </div>
 
-<script>
+<script> 
 function openGate(){
  if(pass.value==="28042025"){
   window.location.href="intro.html";
  }else{
-  msg.innerText="Wrong code 💔";
+  msg.innerText="Wrong date 💔";
  }
 }
 </script>
 
 </body>
-
 </html>
